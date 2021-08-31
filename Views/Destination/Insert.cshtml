@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AirlineCompany.Models.Airplanes.Country>
+@{
+    ViewData["Title"] = "Insert";
+}
+
+<h1>Add a destination</h1>
+@using (Html.BeginForm("Insert", "Destination", FormMethod.Post))
+{
+
+    //<input class="form-control" name="Name" id="Destination" type="text" placeholder="Enter destination's name...">
+    <select>
+        @foreach (var m in Model)
+        {
+            <option value="@m.Name">@m.Name</option>
+        }
+    </select>
+    <input type="submit" value="Add" />
+
+}
+
+

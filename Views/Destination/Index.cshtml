@@ -1,0 +1,24 @@
+﻿@model IEnumerable<AirlineCompany.Models.Airplanes.Destination>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Destinations</h1>
+
+<table class="table table-striped">
+    @foreach (var d in Model)
+    {
+        <tr>
+            <td>
+                @d.ID
+            </td>
+            <td>
+                @d.Name
+            </td>
+            <td>
+                @d.Country.Name
+            </td>
+        </tr>
+    }
+</table>
+

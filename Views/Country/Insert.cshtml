@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "Insert";
+}
+
+<h1>Add new country</h1>
+
+@using (Html.BeginForm("Insert", "Country", FormMethod.Post))
+{
+
+    <input class="form-control" name="Name" id="Country" type="text" placeholder="Enter country's name...">
+    <input type="submit" value="Add" />
+
+}
+

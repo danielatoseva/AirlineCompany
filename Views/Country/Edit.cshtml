@@ -1,0 +1,15 @@
+﻿@model AirlineCompany.Models.Airplanes.Country
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+@using (Html.BeginForm("Edit", "Country", FormMethod.Post))
+{
+    <input type="hidden" name="id" value="@Model.ID" />
+    <input class="form-control" name="Name" id="Country" type="text" value="@Model.Name">
+    <input type="submit" value="Change" />
+
+}
+

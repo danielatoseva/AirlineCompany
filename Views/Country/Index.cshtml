@@ -1,0 +1,21 @@
+﻿@model IEnumerable<AirlineCompany.Models.Airplanes.Country>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Countries</h1>
+
+<table class="table table-striped">
+    @foreach (var c in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => c.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", "Country", new { id = c.ID }) |
+            @Html.ActionLink("Delete","Delete","Country",  new { id = c.ID })
+        </td>
+    </tr>
+    }
+</table>
