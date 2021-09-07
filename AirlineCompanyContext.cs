@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AirlineCompany.Models.Airplanes;
+using AirlineCompany.Models.Flights;
 
 namespace AirlineCompany
 {
@@ -15,6 +16,7 @@ namespace AirlineCompany
         public DbSet<Destination> Destination { get; set; }
         public DbSet<Flight> Flight { get; set; }
         public DbSet<FlightDestinations> FlightDestinations { get; set; }
+        public DbSet<AirRoute> AirRoutes { get; set; }
 
         public AirlineCompanyContext() { }
 
