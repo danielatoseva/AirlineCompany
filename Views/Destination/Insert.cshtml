@@ -7,11 +7,12 @@
 @using (Html.BeginForm("Insert", "Destination", FormMethod.Post))
 {
 
-    //<input class="form-control" name="Name" id="Destination" type="text" placeholder="Enter destination's name...">
-    <select>
+    <label for="Name" class="form-label">Destination name</label>
+    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
+    <select name="CountryId">
         @foreach (var m in Model)
         {
-            <option value="@m.Name">@m.Name</option>
+            <option value="@m.ID">@m.Name</option>
         }
     </select>
     <input type="submit" value="Add" />

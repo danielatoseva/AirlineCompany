@@ -22,6 +22,7 @@ namespace AirlineCompany.Controllers.admin
         {
             if (Name == null)
             {
+
                 return View();
             }
             // Insert country

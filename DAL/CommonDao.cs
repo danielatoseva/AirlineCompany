@@ -88,5 +88,10 @@ namespace AirlineCompany.DAL
             }
             
         }
+
+        public DbSet<TEntity> GetDbSet()
+        {
+            return _context.Set<TEntity>();
+        }
     }
 }

@@ -3,14 +3,16 @@ using System;
 using AirlineCompany;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AirlineCompany.Migrations
 {
     [DbContext(typeof(AirlineCompanyContext))]
-    partial class AirlineCompanyContextModelSnapshot : ModelSnapshot
+    [Migration("20210913132559_foreign key")]
+    partial class foreignkey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
